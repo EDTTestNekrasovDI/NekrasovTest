@@ -237,6 +237,52 @@
       <textEdit>true</textEdit>
     </extInfo>
   </items>
+  <items xsi:type="form:FormField">
+    <name>Сумма</name>
+    <id>43</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.Сумма</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>СуммаРасширеннаяПодсказка</name>
+      <id>45</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>СуммаКонтекстноеМеню</name>
+      <id>44</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>LabelField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:LabelFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+    </extInfo>
+  </items>
   <items xsi:type="form:Table">
     <name>Товары</name>
     <id>13</id>
@@ -356,6 +402,10 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Объект.Товары.Количество</segments>
       </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ТоварыКоличествоПриИзменении</name>
+      </handlers>
       <extendedTooltip>
         <name>ТоварыКоличествоРасширеннаяПодсказка</name>
         <id>34</id>
@@ -406,6 +456,10 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Объект.Товары.Цена</segments>
       </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ТоварыЦенаПриИзменении</name>
+      </handlers>
       <extendedTooltip>
         <name>ТоварыЦенаРасширеннаяПодсказка</name>
         <id>37</id>
@@ -456,6 +510,10 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Объект.Товары.Сумма</segments>
       </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ТоварыСуммаПриИзменении</name>
+      </handlers>
       <extendedTooltip>
         <name>ТоварыСуммаРасширеннаяПодсказка</name>
         <id>40</id>
